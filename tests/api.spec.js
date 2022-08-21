@@ -1,5 +1,10 @@
 const { test, expect } = require("@playwright/test");
 
+test.beforeAll(async ({ request }) => {
+    const req = await request.get("/api/advertisements/db/drop?confirm=y");
+    expect(req.ok()).toBeTruthy();
+});
+
 test.describe("API: functional tests", async () => {
     test("API alive", async ({ request }) => {
         const req = await request.get("/api/advertisements/");
@@ -30,7 +35,7 @@ test.describe("API: functional tests", async () => {
     test("Create new advertisement - all fields", async ({ request }) => {
         const reqName = "newmax_name";
         const reqStreet = "newmax_street";
-        const reqRooms = "newmax_rooms";
+        const reqRooms = "200";
         const reqPrice = "50";
         const reqStatus = true;
 
@@ -93,7 +98,7 @@ test.describe("API: functional tests", async () => {
 
         const reqName = "editmax_name";
         const reqStreet = "editmax_street";
-        const reqRooms = "editmax_rooms";
+        const reqRooms = "200";
         const reqPrice = "777";
         const reqStatus = true;
 
