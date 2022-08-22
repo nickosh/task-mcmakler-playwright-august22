@@ -112,7 +112,5 @@ test("E2E: Websocket testing", async ({ page, request }) => {
 
     let table = mainPage.tableRows;
     let item = table.filter({ hasText: reqName }).filter({ hasText: reqPrice });
-    await item.waitFor({
-        state: "visible",
-    });
+    await expect(item).toBeVisible();
 });
