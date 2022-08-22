@@ -93,3 +93,26 @@ test("E2E: Edit any existing advertisement", async ({ page, request }) => {
     expect(thisReqItem["name"]).toBe(editName);
     expect(thisReqItem["price"]).toContain(editPrice);
 });
+
+test("E2E: Websocket testing", async ({ page, request }) => {
+    const mainPage = new MainPage(page);
+    await mainPage.goto();
+
+    const reqName = "e2e_websocket";
+    const reqPrice = "890";
+
+    let req = await request.post("/api/advertisements/", { data: { name: reqName, price: reqPrice } });
+    expect(req.ok()).toBeTruthy();
+
+    await mainPage.reloadPopUp.waitFor({
+        state: "visible",
+    });
+    await mainPage.reloadBtn.click();
+    await page.waitForLoadState();
+
+    let table = mainPage.tableRows;
+    let item = table.filter({ hasText: reqName }).filter({ hasText: reqPrice });
+    await item.waitFor({
+        state: "visible",
+    });
+});
