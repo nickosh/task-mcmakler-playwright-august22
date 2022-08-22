@@ -5,6 +5,7 @@ Task project for McMakler company: automated webapp testing with Javascript and 
 ---
 
 Recommended Node.js version: 16.16.0
+
 Recommended NPM version: 8.18.0
 
 Node.js packages used: Playwright 1.25.0, expect-playwright 0.8.0, axe-core 4.4.3, prettier 2.7.1
