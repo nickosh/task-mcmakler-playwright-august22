@@ -40,11 +40,11 @@ What you need to do → API + E2E testing:
 
 ---
 
-E2E functional test suite - `tests/e2e.spec.robot`
+E2E functional test suite - `tests/e2e.spec.js`
 
-UI functional test suite - `tests/ui.spec.robot`
+UI functional test suite - `tests/ui.spec.js`
 
-API functional test suite - `tests/api.spec.robot`
+API functional test suite - `tests/api.spec.js`
 
 19 automated tests prepared for this project.
 
