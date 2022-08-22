@@ -39,7 +39,9 @@ What you need to do → API + E2E testing:
 2. Implement scenarios for created cases
 
 E2E functional test suite - `tests/e2e.suite.robot`
+
 UI functional test suite - `tests/ui.suite.robot`
+
 API functional test suite - `tests/api.suite.robot`
 
 19 automated tests prepared for this project.
