@@ -25,6 +25,7 @@ Recommended to use any terminal app that you prefer.
 ---
 
 Webapp under test: https://admin-advertisement.herokuapp.com
+
 Webapp's API under test: https://admin-advertisement.herokuapp.com/api/advertisements/
 
 **Testing goal:**
