@@ -52,4 +52,6 @@ API functional test suite - `tests/api.spec.js`
 
 ---
 
-Have fun. Feedback will be appreciated.
+Company's feedback which I received:
+
+"The page object model, wasn't fully used, only selectors in the page file. No helpers for API functions. Test files are too big to be easily understood. Test data is not separated from the logic. Playwright was not correctly configured, the browser was running in non-headless mode."
