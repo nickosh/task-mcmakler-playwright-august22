@@ -40,6 +40,13 @@ What you need to do → API + E2E testing:
 1. Create test cases for flow above
 2. Implement scenarios for created cases
 
+**Project conditions:**
+* Javascript/Typescript are the preferred programming languages
+* Use any Framework you’re comfortable with
+* Use any structure or pattern you’re comfortable with
+* Include a README file, in which you explain how to set up the project, how to run
+tests etc.
+
 ---
 
 E2E functional test suite - `tests/e2e.spec.js`
